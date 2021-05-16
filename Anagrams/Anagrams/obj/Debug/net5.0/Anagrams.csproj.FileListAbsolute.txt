@@ -1,0 +1,16 @@
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\Anagrams.exe
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\Anagrams.deps.json
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\Anagrams.runtimeconfig.json
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\Anagrams.runtimeconfig.dev.json
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\Anagrams.dll
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\ref\Anagrams.dll
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\bin\Debug\net5.0\Anagrams.pdb
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.csprojAssemblyReference.cache
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.AssemblyInfoInputs.cache
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.AssemblyInfo.cs
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.csproj.CoreCompileInputs.cache
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.dll
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\ref\Anagrams.dll
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.pdb
+C:\Users\gasim\Desktop\TendenciasGit\Anagrams\Anagrams\obj\Debug\net5.0\Anagrams.genruntimeconfig.cache
