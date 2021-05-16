@@ -31,5 +31,23 @@ namespace AnagramsTest
             AnagramsClass anagrams = new AnagramsClass();
             NUnit.Framework.Assert.AreEqual(anagrams.Check("rosita", "rosa"), false);
         }
+        [TestMethod]
+        public void Arguments_Same_Lengths_Non_Anagrams()
+        {
+            AnagramsClass anagrams = new AnagramsClass();
+            NUnit.Framework.Assert.AreEqual(anagrams.Check("arroz", "cosas"), false);
+        }
+        [TestMethod]
+        public void Arguments_Are_Anagrams()
+        {
+            AnagramsClass anagrams = new AnagramsClass();
+            NUnit.Framework.Assert.AreEqual(anagrams.Check("moro", "romo"), true);
+        }
+        [TestMethod]
+        public void Arguments_Are_Equal()
+        {
+            AnagramsClass anagrams = new AnagramsClass();
+            NUnit.Framework.Assert.AreEqual(anagrams.Check("moro", "moro"), true);
+        }
     }
 }

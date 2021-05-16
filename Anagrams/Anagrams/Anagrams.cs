@@ -29,7 +29,7 @@ namespace Anagrams
                 }
                 else
                 {
-                    return true;
+                    return false;
                 }
             }
         }
