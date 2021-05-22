@@ -1,2 +1,0 @@
-C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\KataAnagramasTest\obj\Debug\KataAnagramasTest.csprojAssemblyReference.cache
-C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\KataAnagramasTest\obj\Debug\KataAnagramasTest.csproj.CoreCompileInputs.cache
