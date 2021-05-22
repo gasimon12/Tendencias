@@ -236,7 +236,8 @@ namespace KataAnagramasTest
                                 "recast",
                                 "traces"                              
         };
-        
+        private Anagrams anagrams = new();
+
         #region Material
         //[TestMethod]
         //public void TestMethod2()
@@ -256,32 +257,39 @@ namespace KataAnagramasTest
         //}
         #endregion
 
-        [TestMethod]
-        public void Sorting()
+        //[TestMethod]
+        public void Input_Sanitizing()
         {
-            Anagrams anagrams = new();
-            Assert.AreEqual(anagrams.Sort("Floccinaucinihilipilification"), anagrams.Sort("liFifINhiAliPIucloCcinICAtion"));
+            Assert.AreEqual(anagrams.Sanitize("Floccinaucinihilipilification"), anagrams.Sanitize("liFifINhiAliPIucloCcinICAtion"));
         }
         [TestMethod]
         public void Time_Measurement()
         {
-            //TODO: HACER QUE COMPRENDA TODO EL ALGORITMO
-            Anagrams anagrams = new();
-            var s1 = Stopwatch.StartNew();
-            StreamReader sr = new StreamReader(@"C:\Users\gasim\Downloads\wordlist.txt");
+            var timer = Stopwatch.StartNew();
+            StreamReader reader = new StreamReader(@"C:\Users\gasim\Downloads\wordlist.txt");
             string line;
-            while ((line = sr.ReadLine()) != null)
+            while ((line = reader.ReadLine()) != null)
             {
-                anagrams.Sort(line);
+                anagrams.Check(line);
             }
-            s1.Stop();
-            TestContext.WriteLine(s1.Elapsed.TotalMilliseconds.ToString());
+            timer.Stop();
+            TestContext.WriteLine(timer.Elapsed.TotalMilliseconds.ToString());
         }
-        [TestMethod]
+        //[TestMethod]
         public void Match()
         {
-            Anagrams temp = new();
-            //Assert.That(temp.Compare());
+            anagrams.Check("Hola");
+            bool exists = anagrams.Check("aLHo");
+            Assert.AreEqual(true, exists);
+        }
+        [TestMethod]
+        public void SetCount()
+        {            
+            foreach (string word in list)
+            {
+                anagrams.Check(word);
+            }
+            Assert.AreEqual(60, anagrams.SetCount());
         }
     }
 }

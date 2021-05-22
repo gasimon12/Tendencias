@@ -11,7 +11,7 @@ namespace Anagramas
 {
     public class Anagrams
     {
-        private Dictionary<string, string> record;
+        private Dictionary<string, LinkedList<string>> dictionary = new Dictionary<string, LinkedList<string>>();
         //TODO: PROBAR CON LINKEDLIST COMO VALOR
         static void Main()
         {
@@ -43,11 +43,40 @@ namespace Anagramas
             return output;
         }
         #endregion
-        public string Sort(string input)
+        public string Sanitize(string raw)
         {
-            char[] now = input.ToLower().ToCharArray();
-            Array.Sort(now);
-            return new string(now);
+            char[] temp = raw.ToCharArray();
+            Array.Sort(temp);
+            return new string(temp);
+        }
+        public int SetCount()
+        {
+            int count = 0;
+            foreach (var pair in dictionary)
+            {
+                if (pair.Value.Count > 1)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+        public bool Check(string raw)
+        {
+            string key = Sanitize(raw);
+            bool match = dictionary.ContainsKey(key);
+            if (match == true)
+            {
+                dictionary.TryGetValue(key, out var list);
+                list.AddLast(raw);
+            }
+            else
+            {
+                dictionary.Add(key, new LinkedList<string>());
+                dictionary.TryGetValue(key, out var list);
+                list.AddLast(raw);
+            }
+            return match;
         }
     }
 }
