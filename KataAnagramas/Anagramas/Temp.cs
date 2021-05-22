@@ -12,7 +12,9 @@ namespace Pepe
     {
         static void Main()
         {
-
+            Temp temp = new();
+            Console.WriteLine(temp.LINQ("oHla"));
+            Console.WriteLine(temp.LINQ("eRROp"));
         }
         public int Empty(string input)
         {
@@ -30,12 +32,23 @@ namespace Pepe
             }
             return intSum;
         }
-        public string Sanitize(string input)
+        public string LINQ(string input)
         {
-            var temp = from unit in input
+            string output = "";
+            var array = from unit in input.ToLower()
                         orderby unit
                         select unit;
-            return temp.ToString();
+            foreach (var item in array)
+            {
+                output += item;
+            }            
+            return output;
+        }
+        public string? ArraySort(string input)
+        {
+            char[] now = input.ToLower().ToCharArray();
+            Array.Sort(now);
+            return new string(now);
         }
     }
 }
