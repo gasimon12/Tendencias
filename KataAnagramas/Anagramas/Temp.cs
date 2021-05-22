@@ -14,6 +14,10 @@ namespace Pepe
         {
 
         }
+        public int Empty(string input)
+        {
+            return 1;
+        }
         public int InternalSum(string input)
         {
             int intSum = 0;
@@ -28,11 +32,10 @@ namespace Pepe
         }
         public string Sanitize(string input)
         {
-            return String.Concat(input.OrderBy(c => c)).ToLowerInvariant();
-        }
-        public int Empty(string input)
-        {
-            return 1;
+            var temp = from unit in input
+                        orderby unit
+                        select unit;
+            return temp.ToString();
         }
     }
 }
