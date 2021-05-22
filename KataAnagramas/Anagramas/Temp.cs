@@ -12,32 +12,27 @@ namespace Pepe
     {
         static void Main()
         {
-            //Console.WriteLine(string.Compare("hola", "aloh", StringComparison.InvariantCultureIgnoreCase));
-            //string pepe1 = "hola";
-            //Temp temp = new Temp();
-            //int temp1 = 0;
-            //int temp2 = 0;
-            //string pepe2 = "@aloh#";
-            //Console.WriteLine(pepe1.GetHashCode());
-            //Console.WriteLine(temp.InternalSum("hola"));
-            //Console.ReadKey();
+
         }
         public int InternalSum(string input)
         {
-            int temp1 = 0;
-            foreach (char @char in input)
+            int intSum = 0;
+            foreach (char unit in input)
             {
-                var test = BitConverter.GetBytes(@char);
-                foreach (byte item in test)
+                foreach (byte num in BitConverter.GetBytes(unit))
                 {
-                    temp1 += item;                    
+                    intSum += num;                
                 }
             }
-            return temp1;
+            return intSum;
         }
-        public string Hash(string input)
+        public string Sanitize(string input)
         {
-            return String.Concat(input.OrderBy(c => c));
+            return String.Concat(input.OrderBy(c => c)).ToLowerInvariant();
+        }
+        public int Empty(string input)
+        {
+            return 1;
         }
     }
 }
