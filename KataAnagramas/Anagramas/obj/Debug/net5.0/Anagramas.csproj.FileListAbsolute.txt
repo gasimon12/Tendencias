@@ -1,0 +1,16 @@
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\Anagramas.exe
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\Anagramas.deps.json
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\Anagramas.runtimeconfig.json
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\Anagramas.runtimeconfig.dev.json
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\Anagramas.dll
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\ref\Anagramas.dll
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\bin\Debug\net5.0\Anagramas.pdb
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.AssemblyInfoInputs.cache
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.AssemblyInfo.cs
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.csproj.CoreCompileInputs.cache
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.dll
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\ref\Anagramas.dll
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.pdb
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.genruntimeconfig.cache
+C:\Users\gasim\Desktop\TendenciasGit\KataAnagramas\Anagramas\obj\Debug\net5.0\Anagramas.csprojAssemblyReference.cache
