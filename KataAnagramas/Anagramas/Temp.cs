@@ -70,18 +70,11 @@ namespace Pepe
             var s1 = Stopwatch.StartNew();
             while ((line = sr.ReadLine()) != null)
             {
-                temp.LINQSort(line);
-            }
-            s1.Stop();
-            StreamReader sr2 = new StreamReader(@"C:\Users\gasim\Downloads\wordlist.txt");
-            var s2 = Stopwatch.StartNew();
-            while ((line = sr2.ReadLine()) != null)
-            {
                 temp.Sort(line);
             }
-            s2.Stop();
-            Console.WriteLine("Algoritmo con LINQ: " + s1.Elapsed.TotalMilliseconds + "ms");
-            Console.WriteLine("Algoritmo con ArraySort: " + s2.Elapsed.TotalMilliseconds + "ms");
+            s1.Stop();
+            sr.Close();
+            Console.WriteLine("Algoritmo con ArraySort1: " + s1.Elapsed.TotalMilliseconds + "ms");
         }
         public int Empty(string input)
         {
@@ -100,13 +93,6 @@ namespace Pepe
             }
             return intSum;
         }
-        #endregion
-        public string Sort(string input)
-        {
-            char[] now = input.ToLower().ToCharArray();
-            Array.Sort(now);
-            return new string(now);
-        }
         public string LINQSort(string input)
         {
             string output = "";
@@ -116,8 +102,15 @@ namespace Pepe
             foreach (var item in array)
             {
                 output += item;
-            }            
+            }
             return output;
+        }
+        #endregion
+        public string Sort(string input)
+        {
+            char[] now = input.ToLower().ToCharArray();
+            Array.Sort(now);
+            return new string(now);
         }
     }
 }
