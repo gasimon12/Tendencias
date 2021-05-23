@@ -1,65 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anagramas
 {
     public class Anagrams
     {
         private Dictionary<string, LinkedList<string>> dictionary = new Dictionary<string, LinkedList<string>>();
-        //TODO: PROBAR CON LINKEDLIST COMO VALOR
-        static void Main()
+        static void Main(string[] args)
         {
-
-        }
-        #region Material
-        public int InternalSum(string input)
-        {
-            int intSum = 0;
-            foreach (char unit in input)
+            var timer = Stopwatch.StartNew();
+            Anagrams anagrams = new();
+            StreamReader reader = new StreamReader(args[0]);
+            string line;
+            while ((line = reader.ReadLine()) != null)
             {
-                foreach (byte num in BitConverter.GetBytes(unit))
-                {
-                    intSum += num;
-                }
+                anagrams.Check(line);
             }
-            return intSum;
+            var (setCount, wordCount) = anagrams.Print();
+            timer.Stop();
+            Console.WriteLine($"Duracion: {timer.Elapsed.TotalMilliseconds}ms");
+            Console.WriteLine($"Conjuntos de anagramas: {setCount} \nAnagramas: {wordCount}");
         }
-        public string LINQSort(string input)
-        {
-            string output = "";
-            var array = from unit in input.ToLower()
-                        orderby unit
-                        select unit;
-            foreach (var item in array)
-            {
-                output += item;
-            }
-            return output;
-        }
-        #endregion
         public string Sanitize(string raw)
         {
             char[] temp = raw.ToCharArray();
             Array.Sort(temp);
             return new string(temp);
         }
-        public int SetCount()
+        public (int, int) Print()
         {
-            int count = 0;
+            var (setCount, wordCount) = (0, 0);
+            int count;
+            StreamWriter writer = new(@".\output.txt");
             foreach (var pair in dictionary)
             {
-                if (pair.Value.Count > 1)
+                count = pair.Value.Count;
+                if (count > 1)
                 {
-                    count++;
+                    setCount++;
+                    wordCount += count;
+                    foreach (string anagram in pair.Value)
+                    {
+                        writer.Write($"{anagram} ");
+                    }
+                    writer.WriteLine("");
                 }
             }
-            return count;
+            writer.Close();
+            return (setCount, wordCount);
         }
         public bool Check(string raw)
         {

@@ -238,58 +238,27 @@ namespace KataAnagramasTest
         };
         private Anagrams anagrams = new();
 
-        #region Material
-        //[TestMethod]
-        //public void TestMethod2()
-        //{
-        //    string[] words = { "abed", "bade", "bead", "abet", "beat", "beta" };
-        //    Anagrams temp = new();
-        //    int count = 0;
-
-        //    for (int i = 0; i < words.Length - 1; i++)
-        //    {
-        //        if (temp.Empty(words[i]) == temp.Empty(words[i + 1]))
-        //        {
-        //            count++;
-        //        }
-        //    }
-        //    Assert.AreEqual(count, 4);
-        //}
-        #endregion
-
-        //[TestMethod]
+        [TestMethod]
         public void Input_Sanitizing()
         {
-            Assert.AreEqual(anagrams.Sanitize("Floccinaucinihilipilification"), anagrams.Sanitize("liFifINhiAliPIucloCcinICAtion"));
+            string output = anagrams.Sanitize("floccinaucinihilipilification");
+            Assert.AreEqual("aaccccffhiiiiiiiiilllnnnooptu", output);
         }
         [TestMethod]
-        public void Time_Measurement()
+        public void Are_Anagrams()
         {
-            var timer = Stopwatch.StartNew();
-            StreamReader reader = new StreamReader(@"C:\Users\gasim\Downloads\wordlist.txt");
-            string line;
-            while ((line = reader.ReadLine()) != null)
-            {
-                anagrams.Check(line);
-            }
-            timer.Stop();
-            TestContext.WriteLine(timer.Elapsed.TotalMilliseconds.ToString());
-        }
-        //[TestMethod]
-        public void Match()
-        {
-            anagrams.Check("Hola");
-            bool exists = anagrams.Check("aLHo");
+            anagrams.Check("Floccinaucinihilipilification");
+            bool exists = anagrams.Check("liFifinhialipiucloccinication");
             Assert.AreEqual(true, exists);
         }
         [TestMethod]
-        public void SetCount()
+        public void Counters()
         {            
             foreach (string word in list)
             {
                 anagrams.Check(word);
             }
-            Assert.AreEqual(60, anagrams.SetCount());
+            Assert.AreEqual((60, 210), anagrams.Print());
         }
     }
 }

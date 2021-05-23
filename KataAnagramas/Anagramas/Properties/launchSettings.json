@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Anagramas": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\users\\gasim\\downloads\\wordlist.txt"
+    }
+  }
+}
