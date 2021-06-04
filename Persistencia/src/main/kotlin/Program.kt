@@ -13,6 +13,8 @@ fun main(){
         }
         num = temp
         radix++
+        println("Paso ${radix}: ${num}")
         digitCount = log10(num.toDouble()).plus(1).toInt()
     }while(digitCount > 1)
+    println("La persistencia multiplicativa es: ${radix}")
 }
