@@ -12,9 +12,9 @@ fun main(){
             temp *= num % 10
             num /= 10
         }
-        digitCount =
+        digitCount = log10(temp.toDouble()).plus(1).toInt()
         num = temp
         radix++
-
     }while(digitCount > 1)
+    println("La persistencia multiplicativa es: ${radix}")
 }
