@@ -25,6 +25,6 @@ fun main(){
             digitCount = log10(num.toDouble()).plus(1).toInt()
             perst++
         }while(digitCount > 1)
-
+        println("La persistencia multiplicativa del numero es: " +perst)
     }
 }
