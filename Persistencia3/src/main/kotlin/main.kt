@@ -1,10 +1,12 @@
 import kotlin.math.*
 
 fun main() {
+    val persistence: Persistence = Persistence()
     print("Inserte un numero: ")
     try{
         var num = readLine()!!.toLong()
-
+        var result = persistence.calculate(num, 0)
+        println("La persistencia multiplicativa es: $result")
     }catch(e: NumberFormatException){
         println("Error! Entrada invalida")
     }

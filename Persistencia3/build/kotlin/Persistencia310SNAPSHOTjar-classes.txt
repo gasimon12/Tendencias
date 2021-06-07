@@ -1,0 +1,1 @@
+C:\Users\gasim\Desktop\TendenciasGit\Persistencia3\build\classes\kotlin\main\MainKt.class;C:\Users\gasim\Desktop\TendenciasGit\Persistencia3\build\classes\kotlin\main\Persistence.class

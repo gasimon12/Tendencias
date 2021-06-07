@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PersistenceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-06-07T01:42:11" hostname="LAPTOP-J1AFG4QV" time="0.046">
+  <properties/>
+  <testcase name="number1" classname="PersistenceTest" time="0.04"/>
+  <testcase name="number2" classname="PersistenceTest" time="0.001"/>
+  <testcase name="number3" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number4" classname="PersistenceTest" time="0.001"/>
+  <testcase name="number5" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number6" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number7" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number8" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number9" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number10" classname="PersistenceTest" time="0.0"/>
+  <testcase name="number11" classname="PersistenceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
