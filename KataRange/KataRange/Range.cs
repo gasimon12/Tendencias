@@ -22,6 +22,32 @@ namespace KataRange
             lowerInclusive = input[0] == '[' ? true : false;
             upperInclusive = input[^1] == ']' ? true : false;
         }
+        public int[] GetMidPoints()
+        {
+            int lower, upper, count, parity, distance;
+            lower = lowerLimit;
+            upper = upperLimit;
+            if (lowerInclusive == false)
+            {
+                lower = lowerLimit + 1;
+            }
+            if (upperInclusive == false)
+            {
+                upper = upperLimit - 1;
+            }
+            count = upper - lower;
+            parity = (count + 1) % 2;
+            if (parity == 0)
+            {
+                distance = count / 2;
+                return new int[] {lower + distance, lower + distance + 1};
+            }
+            else
+            {
+                distance = (count + 1) / 2;
+                return new int[] { lower + distance };
+            }
+        }
         static void Main()
         {
 
