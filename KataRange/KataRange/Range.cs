@@ -35,17 +35,24 @@ namespace KataRange
             {
                 upper = upperLimit - 1;
             }
-            count = upper - lower;
-            parity = (count + 1) % 2;
-            if (parity == 0)
+            if (lower == upperLimit)
             {
-                distance = count / 2;
-                return new int[] {lower + distance, lower + distance + 1};
+                return null;
             }
             else
             {
-                distance = (count + 1) / 2;
-                return new int[] { lower + distance };
+                count = upper - lower;
+                parity = (count + 1) % 2;
+                if (parity == 0)
+                {
+                    distance = count / 2;
+                    return new int[] { lower + distance, lower + distance + 1 };
+                }
+                else
+                {
+                    distance = (count + 1) / 2;
+                    return new int[] { lower + distance };
+                }
             }
         }
         static void Main()

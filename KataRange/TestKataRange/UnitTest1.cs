@@ -71,5 +71,30 @@ namespace TestKataRange
             Assert.AreEqual(41, range.GetMidPoints()[0]);
             Assert.AreEqual(42, range.GetMidPoints()[1]);
         }
+        [TestMethod]
+        public void Three_Inclusive()
+        {
+            Range range = new Range("[23,25]");
+            Assert.AreEqual(24, range.GetMidPoints()[0]);
+        }
+        [TestMethod]
+        public void Three_NotInclusive()
+        {
+            Range range = new Range("(23,25)");
+            Assert.AreEqual(24, range.GetMidPoints()[0]);
+        }
+        [TestMethod]
+        public void Two_Inclusive()
+        {
+            Range range = new Range("[23,24]");
+            Assert.AreEqual(23, range.GetMidPoints()[0]);
+            Assert.AreEqual(24, range.GetMidPoints()[1]);
+        }
+        [TestMethod]
+        public void Two_NotInclusive()
+        {
+            Range range = new Range("(23,24)");
+            Assert.AreEqual(null, range.GetMidPoints());           
+        }
     }
 }
