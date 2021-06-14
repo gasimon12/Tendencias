@@ -44,5 +44,32 @@ namespace TestKataRange
             Range range = new Range("(1,9)");
             Assert.AreEqual(5, range.GetMidPoints()[0]);
         }
+        [TestMethod]
+        public void Even_Inclusive()
+        {
+            Range range = new Range("(20,30]");
+            Assert.AreEqual(25, range.GetMidPoints()[0]);
+            Assert.AreEqual(26, range.GetMidPoints()[1]);
+        }
+        [TestMethod]
+        public void Odd_Inclusive()
+        {
+            Range range = new Range("[40,51)");
+            Assert.AreEqual(45, range.GetMidPoints()[0]);            
+        }
+        [TestMethod]
+        public void Four_NotInclusive()
+        {
+            Range range = new Range("(40,43)");
+            Assert.AreEqual(41, range.GetMidPoints()[0]);
+            Assert.AreEqual(42, range.GetMidPoints()[1]);
+        }
+        [TestMethod]
+        public void Four_Inclusive()
+        {
+            Range range = new Range("[40,43]");
+            Assert.AreEqual(41, range.GetMidPoints()[0]);
+            Assert.AreEqual(42, range.GetMidPoints()[1]);
+        }
     }
 }
